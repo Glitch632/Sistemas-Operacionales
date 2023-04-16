@@ -1,11 +1,11 @@
-# Solución Taller N°4
-## 1. Las funciones y servicios proporcionados por el OS pueden dividirse en dos categorías, descríbalas.
+# **Solución Investigación 02**
+## **1. Las funciones y servicios proporcionados por el OS pueden dividirse en dos categorías, descríbalas.**
 
 - Funciones y servicios que aseguran la eficiencia del sistema operativo en sí mismo incluyen la asignación de recursos, la gestión de responsabilidades, la protección de recursos y la seguridad del sistema.
 
 - Funciones y servicios valiosos para los usuarios en un sistema operativo comprenden la interfaz gráfica de usuario, la ejecución de programas, las operaciones de entrada/salida, las operaciones en sistemas de archivos, las comunicaciones, y otros servicios que facilitan la interacción del usuario con el sistema operativo y las aplicaciones, así como la gestión eficiente de recursos y la colaboración entre usuarios.
 
-## 2. Enumere cinco servicios proporcionados por el OS diseñados para facilitar la comodidad del usuario.
+## **2. Enumere cinco servicios proporcionados por el OS diseñados para facilitar la comodidad del usuario.**
 
 - Interfaz de usuario.
 - Ejecución de programas.
@@ -13,7 +13,7 @@
 - Comunicaciones.
 - Detección de errores.
 
-## 3. Describa como se puede generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa.
+## **3. Describa como se puede generar un informe estadístico de la cantidad de tiempo y recursos consumidos por un programa.**
 
 Elaborar un informe estadístico que muestre el consumo de tiempo y recursos por parte de un programa generalmente implica el uso de herramientas de monitoreo y análisis del rendimiento del sistema operativo. Además, se requiere de interrupciones periódicas del temporizador, en las cuales se registra el valor del contador del programa. Con interrupciones frecuentes, se puede obtener una imagen estadística detallada de varias partes del programa.
 
@@ -35,7 +35,7 @@ Una vez que el programa haya concluido su ejecución, se procede a detener la he
 
 Es fundamental considerar que el proceso de generar un informe sobre el tiempo y recursos consumidos por un programa puede variar según las herramientas utilizadas y el sistema operativo. Es esencial seguir las mejores prácticas y utilizar herramientas confiables y apropiadas para el análisis del rendimiento del sistema operativo.
 
-## 4. Enumere y describa cinco actividades de un OS enfocadas a la administración de archivos.
+## **4. Enumere y describa cinco actividades de un OS enfocadas a la administración de archivos.**
 
 #### * **Crear:**
 - El SO posee la funcionalidad de crear nuevos archivos en el sistema de archivos, lo cual implica asignar espacio en disco para el nuevo archivo en una ubicación específica del sistema, así como asignarle un nombre y establecer los permisos necesarios.
@@ -53,7 +53,7 @@ Es fundamental considerar que el proceso de generar un informe sobre el tiempo y
 - El SO debe facilitar la gestión de permisos y atributos de archivos, lo cual permite controlar el acceso, la seguridad y otras propiedades de los archivos de manera adecuada.
 
 
-## 5. Compare las ventajas y desventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos como de dispositivos.
+## **5. Compare las ventajas y desventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos como de dispositivos.**
 
 # Ventajas
 
