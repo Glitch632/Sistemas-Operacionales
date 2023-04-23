@@ -30,7 +30,7 @@ Las acciones que toma el kernel son las siguientes:
 
 - **Ejecución del nuevo proceso:** El kernel permite que el nuevo proceso sea ejecutado en la CPU y realice sus operaciones habituales.
 
-## **4.Defina las ventajas y desventajas desde el punto de vista del programador para comunicación síncrona y asíncrona.**
+## **4. Defina las ventajas y desventajas desde el punto de vista del programador para comunicación síncrona y asíncrona.**
 
 ### **Comunicación Síncronica:**
 
@@ -100,7 +100,7 @@ Las acciones que toma el kernel son las siguientes:
 
 -Complejidad de manejo: En algunos casos, el manejo de referencias puede ser más complejo que el manejo de copias de datos.
 
-## **6.Defina las ventajas y desventajas desde el punto de vista del OS para mensajes de tamaño fijo y de tamaño variable.**
+## **6. Defina las ventajas y desventajas desde el punto de vista del OS para mensajes de tamaño fijo y de tamaño variable.**
 
 ### **Mensajes de tamaño fijo:**
 
