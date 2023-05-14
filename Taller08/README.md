@@ -26,7 +26,7 @@ Por otro lado, si la CPU está ocupada procesando otros procesos y no puede aten
 
 ## **5. Considere el siguiente conjunto de procesos, todos llegan al mismo tiempo en el orden del subíndice: Dibuje el diagrama de Gantt para FCFS, SJF, por prioridades (# de prioridad baja = a alta prioridad) y RR (cuanto = 1).**
 
-![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![](punto5.png)
 
 ## **6. Cual es el tiempo de ejecución de cada proceso para cada algoritmo?**
 
