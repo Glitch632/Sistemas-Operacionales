@@ -1,6 +1,6 @@
 # **Solución Investigación 07**
 
-## **1.Considere la imagen, demuestre que las cuatro condiciones necesarias para que se produzca un interbloqueo se cumplen**
+## **1. Considere la imagen, demuestre que las cuatro condiciones necesarias para que se produzca un interbloqueo se cumplen**
 
 En primer lugar, la exclusión mutua se cumple en este caso, ya que las dos calles y las dos carreras solo pueden ser utilizadas por el tráfico que transita por ellas, mientras que los procesos están utilizando recursos compartidos. Esto crea una situación en la que los procesos deben esperar para poder acceder a los recursos que necesitan, generando un interbloqueo.
 
@@ -53,13 +53,13 @@ En este caso particular, se tienen tres procesos y cuatro recursos del mismo tip
 
 Considerando las distintas asignaciones posibles:
 
-Asignación: P1 - 2 recursos, P2 - 2 recursos, P3 - 0 recursos.
+- **Asignación: P1 - 2 recursos, P2 - 2 recursos, P3 - 0 recursos.**
 En esta asignación, tanto P1 como P2 obtienen todos los recursos que necesitan, mientras que P3 no obtiene recursos. No se produce interbloqueo, ya que P1 y P2 pueden completar su ejecución sin problemas.
 
-Asignación: P1 - 2 recursos, P2 - 0 recursos, P3 - 2 recursos.
+- **Asignación: P1 - 2 recursos, P2 - 0 recursos, P3 - 2 recursos.**
 En esta asignación, tanto P1 como P3 obtienen todos los recursos que necesitan, mientras que P2 no obtiene recursos. No se produce interbloqueo, ya que P1 y P3 pueden ejecutarse sin problemas.
 
-Asignación: P1 - 0 recursos, P2 - 2 recursos, P3 - 2 recursos.
+- **Asignación: P1 - 0 recursos, P2 - 2 recursos, P3 - 2 recursos.**
 En esta asignación, tanto P2 como P3 obtienen todos los recursos que necesitan, mientras que P1 no obtiene recursos. No se produce interbloqueo, ya que P2 y P3 pueden completar su ejecución sin problemas.
 
 En todas las asignaciones posibles, al menos un proceso puede adquirir todos los recursos necesarios. Por lo tanto, no existe la posibilidad de que se produzca un estado de interbloqueo. En conclusión, el sistema está libre de interbloqueos en este escenario específico.
