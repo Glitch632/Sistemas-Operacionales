@@ -86,9 +86,9 @@ Proceso de 426 KB: Se asignaría a la partición de 600 KB (se utiliza la partic
 * Paginación pura: La paginación también facilita el compartir código. Las páginas de código se asignan de forma independiente y no se requiere contigüidad física. Por lo tanto, múltiples procesos pueden tener sus propias tablas de páginas con páginas de código compartidas, lo que permite una fácil compartición de código entre procesos. Esto mejora la eficiencia del uso de memoria y permite una mayor capacidad de compartir código en comparación con la asignación continua de memoria.
 
 ## **7. En un OS con paginación, un proceso no puede acceder a una zona de memoria que no sea de su propiedad.**
-- ***1. ¿Por qué?*** Se debe a que cada proceso tiene su propio espacio de direcciones virtuales, dividido en páginas con permisos de acceso controlados por el sistema operativo. Esto garantiza que un proceso no pueda acceder a una zona de memoria que no le pertenece, ya que se implementa protección de memoria para mantener la seguridad y el aislamiento entre los procesos. Para permitir el acceso a otras zonas de memoria, el sistema operativo tendría que ajustar los permisos de acceso o establecer mecanismos explícitos de compartición de memoria, pero esto debe realizarse con precaución debido a los posibles riesgos y compromisos de seguridad que puede conllevar.
-- ***2. ¿Como podía el OS permitir el acceso a otras zonas de memoria?*** El sistema operativo ofrece la posibilidad de acceder a otras zonas de memoria mediante la compartición de memoria, la cual implica asignar páginas compartidas que pueden ser accedidas y modificadas por varios procesos. Para lograr esto, se utilizan mecanismos de sincronización y comunicación entre procesos, como semáforos o mutex. Además, se puede emplear el paso de mensajes entre procesos, donde la comunicación se realiza a través del envío de mensajes con datos específicos en lugar de acceder directamente a la memoria de otros procesos. Estas estrategias aseguran un mayor control y seguridad en el acceso a la memoria de otros procesos.
-- ***3. ¿Por qué debería o por qué no debería?*** La determinación de permitir o restringir el acceso a otras áreas de memoria se basa en consideraciones fundamentales como la seguridad y la privacidad. Es crucial salvaguardar la integridad y confidencialidad de los datos, evitando así la exposición de información sensible. Estos aspectos se convierten en elementos determinantes para tomar decisiones que garanticen la protección adecuada de la memoria y la preservación de la privacidad del sistema.
+- **1. ¿Por qué?** Se debe a que cada proceso tiene su propio espacio de direcciones virtuales, dividido en páginas con permisos de acceso controlados por el sistema operativo. Esto garantiza que un proceso no pueda acceder a una zona de memoria que no le pertenece, ya que se implementa protección de memoria para mantener la seguridad y el aislamiento entre los procesos. Para permitir el acceso a otras zonas de memoria, el sistema operativo tendría que ajustar los permisos de acceso o establecer mecanismos explícitos de compartición de memoria, pero esto debe realizarse con precaución debido a los posibles riesgos y compromisos de seguridad que puede conllevar.
+- **2. ¿Como podía el OS permitir el acceso a otras zonas de memoria?** El sistema operativo ofrece la posibilidad de acceder a otras zonas de memoria mediante la compartición de memoria, la cual implica asignar páginas compartidas que pueden ser accedidas y modificadas por varios procesos. Para lograr esto, se utilizan mecanismos de sincronización y comunicación entre procesos, como semáforos o mutex. Además, se puede emplear el paso de mensajes entre procesos, donde la comunicación se realiza a través del envío de mensajes con datos específicos en lugar de acceder directamente a la memoria de otros procesos. Estas estrategias aseguran un mayor control y seguridad en el acceso a la memoria de otros procesos.
+- **3. ¿Por qué debería o por qué no debería?** La determinación de permitir o restringir el acceso a otras áreas de memoria se basa en consideraciones fundamentales como la seguridad y la privacidad. Es crucial salvaguardar la integridad y confidencialidad de los datos, evitando así la exposición de información sensible. Estos aspectos se convierten en elementos determinantes para tomar decisiones que garanticen la protección adecuada de la memoria y la preservación de la privacidad del sistema.
 
 ## **8. Compare el mecanismo de paginación con el de segmentación con respecto a la cantidad de memoria requerida por las estructuras de producción de direcciones para convertir las direcciones virtuales en direcciones físicas.**
 
@@ -100,8 +100,12 @@ Proceso de 426 KB: Se asignaría a la partición de 600 KB (se utiliza la partic
 
 ![](taller11.png)
 
-- 1. 0. 430: La dirección física sería: (0, 649) lo cual se encuentra dentro del rango del segmento 0.
-- 2. 1. 10: La dirección física sería: (1, 2310) lo cual se encuentra dentro del rango del segmento 1.
-- 3. 2. 500: Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
-- 4. 3. 400: La dirección física sería: (3, 1727) lo cual se encuentra dentro del rango del segmento 0.
-- 5. 4. 11: Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
+-1. 0. 430: La dirección física sería: (0, 649) lo cual se encuentra dentro del rango del segmento 0.
+
+-2. 1. 10: La dirección física sería: (1, 2310) lo cual se encuentra dentro del rango del segmento 1.
+
+-3. 2. 500: Por la longitud del segmento 2, de sólo 100, no se podría almacenar. No existe dirección lógica.
+
+-4. 3. 400: La dirección física sería: (3, 1727) lo cual se encuentra dentro del rango del segmento 0.
+
+-5. 4. 11: Por la longitud del segmento 5, de sólo 96, no se podría almacenar. No existe dirección lógica.
