@@ -27,13 +27,21 @@ Stress-ng es una herramienta de prueba de estrés de sistemas informáticos. Su 
 ### **3. Ejecute los comandos 5 veces cada uno, compare los resultados y explique según su criterio el comportamiento de las pruebas**
 
 Las tablas de los resultados de las pruebas de estres están conformadas por las siguientes columnas, seguido se explicará a qué hace referencia cada una:
+
 **#:** Número de prueba
+
 **bogo ops:** Número de iteraciones del estresor durante la ejecución. Esto es métrico de cuánto "trabajo" general se ha logrado en las operaciones.
+
 **real time:** Duración promedio del reloj de pared (en segundos) del factor estresante.
+
 **usr time:** Tiempo total del usuario (en segundos) consumido ejecutando todas las instancias del estresor.
+
 **sys time:** Tiempo total del sistema (en segundos) consumido ejecutando todas las instancias del estresor.
+
 **bogo ops/s (real time):** Operaciones bogo totales por segundo basadas en el tiempo de ejecución del reloj de pared.
+
 **bogo ops/s (usr+sys time):** Operaciones bogo totales por segundo basadas en el tiempo acumulado del usuario y del sistema.
+
 **CPU used per instance:** Porcentaje total de CPU utilizado dividido por el número de instancias de estrés. 100% es 1 CPU completa.
 
 **Resultados evaluación de CPU**
