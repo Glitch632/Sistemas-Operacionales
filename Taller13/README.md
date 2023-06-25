@@ -1,10 +1,10 @@
 # **Solución Investigación 13**
 
-### **1. Nombre y breve descripción de la herramienta.**
+## **1. Nombre y breve descripción de la herramienta.**
 
 Stress-ng es una herramienta de prueba de estrés de sistemas informáticos. Su objetivo principal es generar cargas de trabajo intensivas para evaluar la estabilidad, capacidad de respuesta y rendimiento de un sistema en condiciones extremas. La herramienta ofrece una amplia variedad de pruebas de estrés que cubren diferentes componentes del sistema, como la CPU, la memoria, el almacenamiento y la red. Puede ejecutar cálculos matemáticos intensivos, pruebas de lectura/escritura en disco, pruebas de ancho de banda de red, entre otras. Estas pruebas imitan escenarios de uso exigentes y permiten evaluar el rendimiento y la estabilidad del sistema bajo carga.
 
-### **2. Los comandos creados con una descripción de lo que hace y porque lo hace**
+## **2. Los comandos creados con una descripción de lo que hace y porque lo hace**
 
 - **Para evaluar la CPU:**
 
@@ -24,27 +24,27 @@ Stress-ng es una herramienta de prueba de estrés de sistemas informáticos. Su 
 
   Este comando genera una carga de trabajo con múltiples procesos e hilos utilizando operaciones matriciales durante 15 segundos y almacena el resultado del fichero en "resultado_procesos_hilos.txt".
 
-### **3. Ejecute los comandos 5 veces cada uno, compare los resultados y explique según su criterio el comportamiento de las pruebas**
+## **3. Ejecute los comandos 5 veces cada uno, compare los resultados y explique según su criterio el comportamiento de las pruebas**
 
 Las tablas de los resultados de las pruebas de estres están conformadas por las siguientes columnas, seguido se explicará a qué hace referencia cada una:
 
-**#:** Número de prueba
+- **#:** Número de prueba
 
-**bogo ops:** Número de iteraciones del estresor durante la ejecución. Esto es métrico de cuánto "trabajo" general se ha logrado en las operaciones.
+- **bogo ops:** Número de iteraciones del estresor durante la ejecución. Esto es métrico de cuánto "trabajo" general se ha logrado en las operaciones.
 
-**real time:** Duración promedio del reloj de pared (en segundos) del factor estresante.
+- **real time:** Duración promedio del reloj de pared (en segundos) del factor estresante.
 
-**usr time:** Tiempo total del usuario (en segundos) consumido ejecutando todas las instancias del estresor.
+- **usr time:** Tiempo total del usuario (en segundos) consumido ejecutando todas las instancias del estresor.
 
-**sys time:** Tiempo total del sistema (en segundos) consumido ejecutando todas las instancias del estresor.
+- **sys time:** Tiempo total del sistema (en segundos) consumido ejecutando todas las instancias del estresor.
 
-**bogo ops/s (real time):** Operaciones bogo totales por segundo basadas en el tiempo de ejecución del reloj de pared.
+- **bogo ops/s (real time):** Operaciones bogo totales por segundo basadas en el tiempo de ejecución del reloj de pared.
 
-**bogo ops/s (usr+sys time):** Operaciones bogo totales por segundo basadas en el tiempo acumulado del usuario y del sistema.
+- **bogo ops/s (usr+sys time):** Operaciones bogo totales por segundo basadas en el tiempo acumulado del usuario y del sistema.
 
-**CPU used per instance:** Porcentaje total de CPU utilizado dividido por el número de instancias de estrés. 100% es 1 CPU completa.
+- **CPU used per instance:** Porcentaje total de CPU utilizado dividido por el número de instancias de estrés. 100% es 1 CPU completa.
 
-**Resultados evaluación de CPU**
+### **Resultados evaluación de CPU**
 
 |#| bogo ops | real time | usr time | sys time | bogo ops/s (real time) | bogo ops/s (usr+sys time) | CPU used per instance| 
 |-|----------|-----------|----------|----------|------------|------------|--------------|
@@ -54,9 +54,10 @@ Las tablas de los resultados de las pruebas de estres están conformadas por las
 |4| 68402   |  60.01  |  117.24    |  0.16  |    1139.89   |      582.62    |    48.91        |  
 |5| 67072   |  60.15  |  116.83    |  0.21    |  1115.11     |    573.06    |    48.65      |   
 
+Para esta prueba se utilizó un tiempo de 60 segundos por lo cual en el real time podemos observar que los tiempos oscilan cerca a dicho valor. Sin embargo, si nos fijamos en las bogo ops se observa una diferencia notable de alrededor de 13 mil entre la 2da prueba y la 3ra. Cabe recalcar que las bogo ops/s (real time) tienden a ser el doble de las bogo ops/s (usr+sys time). No se puede observar una clara relación entre el sys time y las operaciones realizadas y se tiene que se consume alrededor de 48.66% de CPU al realizar estas pruebas.
 
 
-**Resultados evaluación de Memoria**
+### **Resultados evaluación de Memoria**
 
 |#| bogo ops | real time | usr time | sys time | bogo ops/s (real time) | bogo ops/s (usr+sys time) | CPU used per instance | 
 |-|----------|-----------|----------|----------|------------|------------|--------------|
@@ -66,7 +67,9 @@ Las tablas de los resultados de las pruebas de estres están conformadas por las
 |4| 1297687 |   15.05   |  25.60   |   4.13   |  86218.37    |  43644.14    |    98.77     |  
 |5| 1294457   |  15.02  |   24.38 |     5.35  |   86203.71  |     43543.43   |     98.99   |    
 
-**Resultados evaluación de Manejo de procesos e hilos**
+Para esta prueba se cambió un poco el tiempo y se utilizó un tiempo de 15 segundos por lo cual en el real time podemos observar que los tiempos oscilan cerca a dicho valor. Si nos fijamos en las bogo ops se observa que no existe una gran diferencia en las pruebas llevadas a cabo. Nuevamente, las bogo ops/s (real time) tienden a ser el doble de las bogo ops/s (usr+sys time). Se puede observar que en la primera prueba el sys time es superior al resto de pruebas, sin embargo, el usr time es menor comparandolo con las otras pruebas, para estas pruebas sí  se utiliza casi 1 CPU completa ya que tenemos que se consume 98.35% de CPU.
+
+### **Resultados evaluación de Manejo de procesos e hilos**
 
 |#| bogo ops | real time | usr time | sys time | bogo ops/s (real time) | bogo ops/s (usr+sys time) | CPU used per instance| 
 |-|----------|-----------|----------|----------|------------|------------|--------------|
@@ -75,3 +78,7 @@ Las tablas de los resultados de las pruebas de estres están conformadas por las
 |3| 107962   |  15.01   |  29.84  |    0.02    |  7194.01    |    3615.35   |    99.49      |  
 |4| 60248   |  15.01  |   27.85   |   0.13   |   4012.85   |     2153.49    |    93.17     |   
 |5| 67320   |  15.01   |  29.16   |   0.11  |    4485.87    |    2299.98      |  97.52     |  
+
+Para esta prueba se volvió a utilizar el tiempo de 15 segundos por lo cual en el real time podemos observar que los tiempos oscilan cerca a dicho valor. Si nos fijamos en las bogo ops se observa una diferencia notable de alrededor de 53 mil entre la 2da y la 4ta prueba. Nuevamente, las bogo ops/s (real time) tienden a ser el doble de las bogo ops/s (usr+sys time). Se observa que en la prueba 4 se tiene el sys time más alto y la que menos bogo ops realizó, también en la prueba 5 donde se obtuvo un sys time elevado sucedió lo mismo. Nuevamente, en estas pruebas se utiliza bastante CPU ya que tenemos que se usa un 97.70% de CPU.
+
+Curiosamente en las pruebas que menos porcentaje de CPU se utilizó fue en las pruebas que estresaban la CPU.
